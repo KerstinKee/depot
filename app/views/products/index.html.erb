@@ -1,4 +1,4 @@
-<h1>Listing products</h1>
+<h1>Your Pragmatic Catalog</h1>
 
 <table>
 <% @products.each do |product| %>
@@ -8,8 +8,9 @@
   </td>
   <td class="list_description">
    <dl>
-      <dt><%= product.title %></dt>
+      <h3><dt><%= product.title %></dt></h3>
       <dd><%= truncate(strip_tags(product.description), length: 80) %></dd>
+      <dt><%= number_to_currency(product.price) %></dt>
    </dl>
   </td>
 <td class="list_actions">
