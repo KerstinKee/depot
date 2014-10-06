@@ -12,6 +12,10 @@ class ProductsController < ApplicationController
   def show
   end
 
+  def hello
+  @time = Time.now
+  end
+
   # GET /products/new
   def new
     @product = Product.new
