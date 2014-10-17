@@ -43,6 +43,7 @@ class CartsController < ApplicationController
 
   # PATCH/PUT /carts/1
   # PATCH/PUT /carts/1.json
+
   def update
     respond_to do |format|
       if @cart.update(cart_params)
@@ -54,6 +55,7 @@ class CartsController < ApplicationController
       end
     end
   end
+
 
   # DELETE /carts/1
   # DELETE /carts/1.json
