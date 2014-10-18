@@ -71,19 +71,25 @@ class CartsController < ApplicationController
 
 private
 
+
   def set_cart
-    @cart = Cart.find(params[:id])
-  end
+       @cart = Cart.find(session[:cart_id])
+   rescue ActiveRecord::RecordNotFound
+      @cart = Cart.create
+      session[:cart_id] = @cart.id
+   end
+end
+
 
   def cart_params
       params[:cart]
-    end
+  end
 
   def invalid_cart
       logger.error "Attempt to access invalid cart #{params[:id]}"
       redirect_to store_url, notice: 'Invalid cart'
-    end
-end
+  end
+
 
 
 
