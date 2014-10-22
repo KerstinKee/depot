@@ -18,7 +18,7 @@ def up
         #replace with a single items
         item = cart.line_items.build(product_id: product_id)
         items.quantity = quantity
-        item.save!
+        item.save
       end
     end
   end
