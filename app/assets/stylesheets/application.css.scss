@@ -7,13 +7,12 @@
 							background: #141;
 							font-family: sans-serif;
 							padding: 0.2em 1em;
-
 						}
 					}
 
 				form {
 					label {
-						with: 5em;
+						width: 5em;
 						float: left;
 						text-align: right;
 						padding-top: 0.2em;
@@ -22,7 +21,7 @@
 					}
 
 				select, textarea, input {
-					margin-left: 0.5em;
+					margin-left: 0.1em;
 				}
 
 				.submit {
@@ -34,7 +33,6 @@
 				}
 			}
 		}
-
 
 
 

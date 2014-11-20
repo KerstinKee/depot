@@ -8,7 +8,7 @@ class Cart < ActiveRecord::Base
     if current_item
      current_item.quantity = current_item.quantity.to_i + 1
     else
-     current_item = line_items.build(product_id: product_id)
+     current_item = line_items.build(product_id: product_id, quantity: 1)
    end
    current_item
   end
